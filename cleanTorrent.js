@@ -33,7 +33,7 @@ function createCleanTorrent(torrentPath) {
     var dir = path.resolve(path.dirname(torrentPath), "New");
     nt.read(torrentPath, function (err, torrent) {
         if (err) {
-            console.log(item + ' 无效');
+            console.log(torrentPath + ' 无效');
             return;
         }
         var metadata = new Metadata(torrent.metadata);
